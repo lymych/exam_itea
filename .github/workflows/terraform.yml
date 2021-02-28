@@ -73,7 +73,7 @@ jobs:
       - name: Terraform Output
         working-directory: 'terraform'
         id: output
-        run: terraform output > ../terraform.log
+        run: terraform output > terraform.log
 
       - name: Upload actifacts
         uses: actions/upload-artifact@v2

@@ -5,6 +5,6 @@ resource "aws_instance" "ubuntu-exam" {
     subnet_id = aws_subnet.exam_itea_subnet.id
     vpc_security_group_ids = [aws_security_group.exam_itea_sg.id]
     tags = {
-        "Name" = "ubuntu-tf"
+        "Name" = "ubuntu-exam"
     }
 }

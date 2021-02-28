@@ -1,4 +1,4 @@
-resource "aws_instance" "ubuntu-tf" {
+resource "aws_instance" "ubuntu-exam" {
     ami = "ami-0932440befd74cdba"
     instance_type = "t2.micro"
     key_name = "key_frankfurt"

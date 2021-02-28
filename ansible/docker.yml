@@ -46,5 +46,11 @@
         group: docker
       become: yes
 
-    - name: run docker
-      command: docker run -d --name lesson2 --rm -p 80:80 lymych/itea_exam:latest
+    - name: Create lesson12
+      docker_container:
+        name: itea_exam
+        image: lymych/itea_exam:latest
+        pull: true
+        state: started
+        ports:
+          - "80:80"

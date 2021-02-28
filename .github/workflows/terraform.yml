@@ -79,4 +79,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: terraform
-          path: ./terraform.log
+          path: terraform.log

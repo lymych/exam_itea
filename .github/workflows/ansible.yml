@@ -21,6 +21,9 @@ jobs:
       - id: hostrepo
         run: |
             echo ${{github.repository}}
+      - name: test
+        run: |
+            cat ./terraform.log
       
       - name: Download artifact
         uses: dawidd6/action-download-artifact@v2

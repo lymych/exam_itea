@@ -48,7 +48,7 @@ resource "aws_route_table_association" "aws_exam_item_rta" {
   route_table_id = aws_route_table.exam_itea_public_crt.id
 }
 
-resource "aws_security_group" "i=exam_itea_sg" {
+resource "aws_security_group" "exam_itea_sg" {
   vpc_id = aws_vpc.exam_itea_vpc.id
 
   egress {

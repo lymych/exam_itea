@@ -30,6 +30,7 @@ jobs:
           workflow_conclusion: success
           name: terraform
           path: terraform.log
+          repo: ${{github.repository}}
 
       - id: host
         env:

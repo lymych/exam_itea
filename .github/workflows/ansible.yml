@@ -21,9 +21,6 @@ jobs:
       - id: hostrepo
         run: |
             echo ${{github.repository}}
-      - name: test
-        run: |
-            cat terraform.log
       
       - name: Download artifact
         uses: dawidd6/action-download-artifact@v2
@@ -32,7 +29,7 @@ jobs:
           workflow: terrafrom.yml
           workflow_conclusion: success
           name: terraform
-          path: terraform.log
+          path: output/terraform.log
 
       - id: host
         env:

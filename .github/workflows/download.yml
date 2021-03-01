@@ -1,9 +1,9 @@
-name: 'Ansible'
+name: 'download'
 
 on:
   workflow_run:
     workflows:
-      - Terraform
+      - terraform
     types: 
       - completed
     branches:
@@ -11,7 +11,7 @@ on:
     
 jobs:
   mysql:
-    name: 'Ansible'
+    name: 'download'
     runs-on: ubuntu-latest
     steps:
       

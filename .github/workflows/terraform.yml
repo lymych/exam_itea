@@ -78,5 +78,5 @@ jobs:
       - name: Upload actifacts
         uses: actions/upload-artifact@v2
         with:
-          name: terraform
+          name: terraformart
           path: terraform.log

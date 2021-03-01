@@ -28,8 +28,4 @@ jobs:
           # "completed", "in_progress", "queued"
           # Default: "completed"
           workflow_conclusion: success
-          name: terraform
-          # Optional, directory where to extract artifact
-          path: terraform.log
-          # Optional, defaults to current repo
-          repo: ${{github.repository}}
+          name: terraformart

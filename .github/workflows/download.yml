@@ -21,3 +21,4 @@ jobs:
           workflow: terraform.yml
           workflow_conclusion: success
           name: terraform_art
+          path: terraform.log

@@ -24,8 +24,8 @@ jobs:
           github_token: ${{secrets.GITHUB_TOKEN}}
           workflow: terraform.yml
           workflow_conclusion: success
-          name: terraform
-          path: terraform_art
+          name: terraform_art
+          path: terraform.log
 
       - id: host
         env:

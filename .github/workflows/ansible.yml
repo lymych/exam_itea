@@ -32,7 +32,7 @@ jobs:
           path: terraform.log
           repo: ${{github.repository}}
 
-      - id: ls -la
+      - id: ls
         run: |
             ls -la
 

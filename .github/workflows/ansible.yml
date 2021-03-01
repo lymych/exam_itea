@@ -10,7 +10,7 @@ on:
       - main
     
 jobs:
-  mysql:
+  docker:
     name: 'Ansible'
     runs-on: ubuntu-latest
     steps:
@@ -22,10 +22,9 @@ jobs:
         uses: dawidd6/action-download-artifact@v2
         with:
           github_token: ${{secrets.GITHUB_TOKEN}}
-          workflow: terraform.yml
+          workflow: 610715373
           workflow_conclusion: success
           name: terraform
-          path: terraform.log
 
       - id: host
         env:

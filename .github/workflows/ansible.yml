@@ -21,6 +21,7 @@ jobs:
       - id: hostrepo
         run: |
             echo ${{github.repository}}
+            echo ${{secrets.GITHUB_TOKEN}}
       
       - name: Download artifact
         uses: dawidd6/action-download-artifact@v2
@@ -30,11 +31,6 @@ jobs:
           workflow_conclusion: success
           name: terraform
           path: terraform.log
-          repo: ${{github.repository}}
-
-      - id: ls
-        run: |
-            ls -la
 
       - id: host
         env:

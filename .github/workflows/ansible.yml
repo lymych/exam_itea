@@ -29,7 +29,7 @@ jobs:
           workflow: terrafrom.yml
           workflow_conclusion: success
           name: terraform
-          # path: terraform.log
+          path: terraform.log
 
       - id: host
         env:

@@ -1,9 +1,9 @@
-name: 'Ansible'
+name: 'ansible'
 
 on:
   workflow_run:
     workflows:
-      - Terraform
+      - terraform
     types: 
       - completed
     branches:

@@ -11,8 +11,8 @@ on:
     
 jobs:
   docker:
-    name: 'Ansible'
-    runs-on: ubuntu-latest
+    name: 'ansible'
+    runs-on: Ubuntu-20.04
     steps:
       
       - name: Checkout

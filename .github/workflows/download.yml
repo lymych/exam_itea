@@ -1,4 +1,4 @@
-name: 'ansible'
+name: 'download'
 
 on:
   workflow_run:
@@ -12,13 +12,13 @@ on:
 jobs:
   docker:
     name: 'download'
-    runs-on: ubuntu-latest
+    runs-on: Ubuntu-20.04
     steps:
       - name: Download artifact
         uses: dawidd6/action-download-artifact@v2
         with:
           # Optional, GitHub token
-          github_token: ${{secrets.GITHUB_TOKEN}}
+          github_token: ${{secrets.GITHUBTOKEN}}
           # Required, workflow file name or ID
           workflow: terraform.yml
           # Optional, the status or conclusion of a completed workflow to search for

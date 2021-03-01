@@ -17,15 +17,7 @@ jobs:
       - name: Download artifact
         uses: dawidd6/action-download-artifact@v2
         with:
-          # Optional, GitHub token
-          github_token: ${{secrets.GITHUBTOKEN}}
-          # Required, workflow file name or ID
+          github_token: ${{secrets.GITHUB_TOKEN}}
           workflow: terraform.yml
-          # Optional, the status or conclusion of a completed workflow to search for
-          # Can be one of a workflow conculsion::
-          # "failure", "success", "neutral", "cancelled", "skipped", "timed_out", "action_required"
-          # Or a workflow status:
-          # "completed", "in_progress", "queued"
-          # Default: "completed"
           workflow_conclusion: success
-          name: terraformart
+          name: terraform_art

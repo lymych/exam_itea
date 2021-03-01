@@ -15,12 +15,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       
-      - name: Checkout
-        uses: actions/checkout@v2
+      # - name: Checkout
+      #   uses: actions/checkout@v2
 
-      - id: hostrepo
-        run: |
-            echo ${{github.repository}}
+      # - id: hostrepo
+      #   run: |
+      #       echo ${{github.repository}}
       
       - name: Download artifact
         uses: dawidd6/action-download-artifact@v2
@@ -30,6 +30,7 @@ jobs:
           workflow_conclusion: success
           name: terraform
           path: terraform.log
+          repo: ${{github.repository}}
 
       - id: host
         env:

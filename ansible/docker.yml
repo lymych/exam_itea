@@ -4,8 +4,8 @@
   gather_facts: false
   tasks:
 
-    - name: Update apt cache
-      apt: update_cache=yes cache_valid_time=3600
+    - name: Update apt-get repo and cache
+      apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
       become: yes
 
     - name: Install dependencies
@@ -29,10 +29,6 @@
       apt_repository:
         repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable
         state: present
-      become: yes
-
-    - name: Update apt cache
-      apt: update_cache=yes cache_valid_time=3600
       become: yes
 
     - name: Install Docker

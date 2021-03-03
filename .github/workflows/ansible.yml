@@ -25,12 +25,12 @@ jobs:
           workflow: terraform.yml
           workflow_conclusion: success
           name: terraform
-          path: terraform.log
 
       - id: host
         env:
           SSH: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
+            ls -la
             host=$(grep "ec2_endpoint" terraform.log | awk -F  ":" '{print $1}' )
             host=${host//'ec2_endpoint = "'}
             host=${host//'"'}

@@ -2,11 +2,11 @@
 - name: docker
   hosts: all
   gather_facts: false
+  become: yes
   tasks:
 
     - name: Update apt-get repo and cache
       apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
-      become: yes
 
     - name: Install dependencies
       apt:
@@ -17,19 +17,16 @@
         - software-properties-common
         - gnupg-agent
         state: latest
-      become: yes
       
     - name: Add Docker’s official GPG key
       apt_key:
         url: https://download.docker.com/linux/ubuntu/gpg
         state: present
-      become: yes
 
     - name: Add apt repository
       apt_repository:
         repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable
         state: present
-      become: yes
 
     - name: Install Docker
       apt:
@@ -37,16 +34,14 @@
         - docker-ce
         - docker-ce-cli
         state: present
-      become: yes
 
     - name: Add user to docker group
       user:
         name: "ubuntu"
         group: docker
-      become: yes
 
     - name: Create exam_itea
       command: docker run -d --name exam_itea --rm -p 80:80 lymych/itea_exam:latest
 
     - name: curl
-      command: curl localhost
+      command: curl https://v2lpty6x07.execute-api.eu-central-1.amazonaws.com/default/tg

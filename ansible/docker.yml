@@ -46,10 +46,4 @@
       become: yes
 
     - name: Create exam_itea
-      docker_container:
-        name: itea_exam
-        image: lymych/itea_exam:latest
-        pull: true
-        state: started
-        ports:
-          - "80:80"
+      command: docker run -d --name exam_itea --rm -p 80:80 lymych/itea_exam:latest

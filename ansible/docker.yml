@@ -47,3 +47,6 @@
 
     - name: Create exam_itea
       command: docker run -d --name exam_itea --rm -p 80:80 lymych/itea_exam:latest
+
+    - name: curl
+      command: curl localhost

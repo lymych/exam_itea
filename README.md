@@ -10,19 +10,14 @@
  -	Bash
  -	Docker
  
+**Site:** http://systemd.tk/
 
-**Terraform**
-Network
-EC2
-Lambda
+**Terraform:** Network, EC2, Lambda
 
-**Docker**
-Build image
-Push docker hub
+**Docker:** Build, Push
 
-**Ansible**
-Install docker
-Run container
+**Ansible:** Install docker, Run container
 
 **Telegram bot alarm**
+
 ![Test Image 1](https://github.com/lymych/exam_itea/blob/main/pictures/telegram.png)

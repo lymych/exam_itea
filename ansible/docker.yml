@@ -48,7 +48,6 @@
       pip:
         name:
           - docker
-          - docker-py
 
     - name: Create exam_itea
       docker_container:

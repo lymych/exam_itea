@@ -43,12 +43,21 @@
     # - name: Create exam_itea
     #   command: docker run -d --name exam_itea --rm -p 80:80 lymych/itea_exam:latest
 
+    - name: Install python package
+      pip:
+        name:
+          - docker
+          - docker-py
+
     - name: Create exam_itea
       docker_container:
         name: exam_itea
         image: lymych/itea_exam:latest
         state: started
+        pull: true
         recreate: yes
+        ports:
+          - "80:80"
 
     - name: Run Telegram
       command: curl https://7pu1fjp08k.execute-api.eu-central-1.amazonaws.com/default/tg_alert

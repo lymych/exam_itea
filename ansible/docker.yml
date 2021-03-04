@@ -16,6 +16,7 @@
         - curl
         - software-properties-common
         - gnupg-agent
+        - python3-pip
         state: latest
       
     - name: Add Docker’s official GPG key

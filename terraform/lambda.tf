@@ -18,14 +18,15 @@ resource "aws_iam_role" "iam_tg01" {
 EOF
 }
 
-
 resource "aws_lambda_function" "tg_alert" {
-  filename         = "tg01.zip"
+  s3_bucket = "systemd.tk"
+  s3_key    = "tg01.zip"
   function_name    = "tg_alert"
+  handler          = "lambda_function.lambda_handler"
   runtime          = "python3.8"
   role             = aws_iam_role.iam_tg01.arn
-  handler          = "lambda_function.lambda_handler"
-  source_code_hash = filebase64sha256("tg01.zip")
+  timeout          = 180
+
 
   environment {
     variables = {

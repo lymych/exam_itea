@@ -44,4 +44,4 @@
       command: docker run -d --name exam_itea --rm -p 80:80 lymych/itea_exam:latest
 
     - name: Run Telegram
-      command: curl https://v2lpty6x07.execute-api.eu-central-1.amazonaws.com/default/tg
+      command: curl https://0624hl1cud.execute-api.eu-central-1.amazonaws.com/default/tg_alert
